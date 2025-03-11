@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-artifakt-element, sans-serif);
+}
+/* Increase the size of the dots */
+.slick-dots li button:before {
+  font-size: 12px !important; /* Adjust this value to make the dots larger */
+  color: #ccc; /* Default dot color */
+}
+
+/* Change the color of the active dot */
+.slick-dots li.slick-active button:before {
+  color: #069986 !important;; /* Active dot color */
+}
+
+.swiper {
+height: 95%;
+}
+
+.myCarousel .splide__arrow--prev {
+  left: -2.5em !important;
+}
+
+.myCarousel .splide__arrow--next {
+  right: -2.5em !important;
+}
+
+/* globals.css or blogStyles.css */
+
+/* Heading Styles */
+.desBody h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #3a3d42;
+  margin-bottom: 1rem;
+}
+
+.desBody h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #3a3d42;
+  margin-bottom: 0.8rem;
+}
+
+.desBody h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #3a3d42;
+  margin-bottom: 0.6rem;
+}
+
+/* Paragraph Styles */
+.desBody p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+/* List Styles */
+.desBody ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.desBody li {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+}
+
+/* Strong and Emphasis Styles */
+.desBody strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.desBody em {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+
+/* Custom classes for better spacing */
+.desBody h1,
+.desBody h2,
+.desBody h3 {
+  margin-top: 1.5rem;
+}
+
+.desBody ul {
+  list-style-type: disc;
+}
+.md\:flex p.mycatname {
+  position: absolute;
+  margin-left: -85px;
+  margin-top: 90px;
+}
+.md\:flex-row-reverse p.mycatname {
+  position: absolute;
+  margin-left: 380px;
+  margin-top: 100px;
+}
+
+.md\:flex-row-reverse .mypost {
+  /* margin-right: 132px; */
+  margin-left: 30px;
+  text-align: left;
+}
+button.splide__pagination__page.is-active, span.swiper-pagination-bullet.swiper-pagination-bullet-active, .paginate .swiper-pagination-bullet-active {
+  background: #059886 !important;
+  height: 10px;
+  width: 10px;
+}
+.myjobpopup .formspopup .grid {
+  display: flex !important;
+  flex-direction: column;
+}
+.formspopup {
+--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.myjobpopup .formspopup {
+  --tw-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0px rgb(0 0 0 / 0);
+  --tw-shadow-colored: 0 0px 0px 0px var(--tw-shadow-color), 0 0px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #00000000), var(--tw-ring-shadow, 0 0 #00000000), var(--tw-shadow);
+  }
+@media only screen and (max-width: 768px) {
+  .myslides button.splide__arrow {
+    top: 100%;
+  }
+}
