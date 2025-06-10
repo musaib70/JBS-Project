@@ -17,6 +17,7 @@ module.exports = class BaseController {
         try {
             const { filters, filters_in, filters_like, perpage = 20, page = 1, fields, reference, reference_id } = req.query;
 
+            let limit = 100; // set default page size to 100
             // parse filter types
             const parseFilters = (filter_string, parseFn) => {
                 if (!filter_string) return {};
@@ -75,8 +76,8 @@ module.exports = class BaseController {
                         metadata: [{ $count: 'totalDocuments' }],
                         data: [
                             // { $sort: { createdAt: -1 } },
-                            { $skip: (Number(page) - 1) * Number(perpage) },
-                            { $limit: Number(perpage) }
+                            { $skip: (Number(page) - 1) * Number(limit) },
+                            { $limit: Number(limit) }
                         ]
                     }
                 }
