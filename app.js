@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const path = require('path')
 const authMiddleware = require('./middleware/auth')
 const cookieParser = require('cookie-parser')
+const multer = require('multer')
 // const bodyParser = require('body-parser')
 const cors = require('cors')
 const connectDB = require('./config/db');
@@ -24,6 +25,20 @@ const gracefulShutdown = async (signal) => {
 };
 process.on('SIGINT', gracefulShutdown);
 process.on('SIGTERM', gracefulShutdown);
+
+// handle files
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const uploadDir = 'uploads/';
+        if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
+        cb(null, uploadDir);
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + file.originalname);
+    },
+});
+
+app.use(multer({ storage }).any());
 
 // middlewares setup
 app.use(express.json({ limit: '50mb' }))
@@ -52,7 +67,7 @@ app.get('/uploads/:folder/:filename', (req, res) => {
         return res.sendFile(imagePath);
     } else {
         return res.status(404).send('Image not found');
-    }
+    }
 });
 
 /* app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }))
