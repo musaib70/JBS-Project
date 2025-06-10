@@ -1,0 +1,1 @@
+import"./chunk-RGL3W33T.js";var o=[{path:"",data:{title:"Job Application"},children:[{path:"",redirectTo:"list",pathMatch:"full"},{path:"list",loadComponent:()=>import("./chunk-3IEKA7WT.js").then(t=>t.JobApplicationComponent),data:{title:"List"}}]}];export{o as routes};
