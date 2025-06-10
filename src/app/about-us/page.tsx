@@ -100,16 +100,7 @@ const AboutUs = () => {
               Your Partner for <br /> Innovation
             </h1>
             <p className="text-gray-700 text-lg my-5 max-w-lg text-left">
-              JBS Consulting is all about using technology to make work easier,
-              smarter, and more impactful for everyone. Our journey began in
-              1849 with a humble trading firm in Pune, India, and has since
-              evolved into a legacy of innovation and excellence. In 1948,
-              Jaffer Brothers (Private) Limited was founded in Karachi,
-              Pakistan, and became a pioneering force in shaping industries and
-              driving progress. Today, JBS Consulting continues that proud
-              tradition, blending decades of expertise with forward-thinking
-              solutions to help businesses thrive in a digital world.
-            </p>
+            JBS Consulting is a leading digital transformation partner, blending decades of expertise with cutting-edge technology to deliver innovative solutions. We carry forward a rich legacy of innovation and excellence. Today, it stands at the forefront of technological advancement, helping businesses navigate the complexities of the digital age. Specializing in AI-driven strategies, cloud solutions, and end-to-end digital transformations, JBS Consulting collaborates with industry giants like SAP, Oracle, and Microsoft to empower organizations with seamless technology transitions and impactful results.</p>
           </div>
         </div>
       </section>
